@@ -20,7 +20,10 @@ export function serve(
     {
       port: 0,
       onListen() {
-        const url = new URL(getEnvOrThrow("JET_BREEZE_PATH_PREFIX"), getEnvOrThrow("JET_BREEZE_HOST"));
+        const url = new URL(
+          getEnvOrThrow("JET_BREEZE_PATH_PREFIX"),
+          getEnvOrThrow("JET_BREEZE_HOST"),
+        );
         console.log(`Listening on ${url.toString()}`);
       },
     },
