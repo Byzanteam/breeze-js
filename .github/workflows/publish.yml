@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  # FIXME: DELTE push
+  push:
+    branches:
+      - chore/jsr
+  release:
+    types:
+      - published
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx jsr publish

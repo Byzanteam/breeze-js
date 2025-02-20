@@ -1,19 +1,30 @@
 {
   "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "name": "@byzanteam/breeze-js",
+  "version": "0.1.0-alpha.2",
   "compilerOptions": {
     "strict": true,
     "useUnknownInCatchVariables": true,
     "noImplicitOverride": true,
     "types": [
-      "./mod.d.ts"
+      "./types.d.ts"
     ]
   },
   "exclude": [
     ".git"
   ],
+  "exports": {
+    "./types.d.ts": "./types.d.ts"
+  },
+  "license": "MIT",
+  "publish": {
+    "exclude": [
+      ".github"
+    ]
+  },
   "tasks": {
+    "check": "deno fmt --check && deno lint && deno task check:types && deno task test",
     "test": "deno check types_test.ts",
-    "check:types": "deno check **/*.ts",
-    "check": "deno fmt --check && deno lint && deno task check:types && deno task test"
+    "check:types": "deno check **/*.ts"
   }
 }
