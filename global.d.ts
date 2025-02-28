@@ -30,7 +30,10 @@ declare namespace BreezeRuntime {
 
   export function pluginFetch(plugin: string): Promise<Response>;
 
-  export function pluginFetch(plugin: string, path: string): Promise<Response>;
+  export function pluginFetch(
+    plugin: string,
+    path: string,
+  ): Promise<Response>;
 
   export function pluginFetch(
     plugin: string,
@@ -43,3 +46,5 @@ declare namespace BreezeRuntime {
     opts: RequestInit,
   ): Promise<Response>;
 }
+
+export default BreezeRuntime;

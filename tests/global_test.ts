@@ -1,9 +1,9 @@
 import {
   assertType,
-  Has,
-  IsExact,
-  IsNullable,
-} from "https://deno.land/std@0.212.0/testing/types.ts";
+  type Has,
+  type IsExact,
+  type IsNullable,
+} from "../dev_deps.ts";
 
 {
   type Result = ReturnType<typeof BreezeRuntime.getDeploymentInfo>;
