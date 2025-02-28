@@ -21,7 +21,7 @@ interface TokenOptions {
   plugin?: string;
 }
 
-interface BreezeRuntime {
+export interface BreezeRuntime {
   DeploymentInfo: DeploymentInfo;
 
   /**
@@ -86,5 +86,3 @@ interface BreezeRuntime {
     opts: RequestInit,
   ): Promise<Response>;
 }
-
-export default BreezeRuntime;

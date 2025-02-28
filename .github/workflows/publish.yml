@@ -1,10 +1,6 @@
 name: Publish
 
 on:
-  # FIXME: DELTE push
-  push:
-    branches:
-      - chore/jsr
   release:
     types:
       - published
