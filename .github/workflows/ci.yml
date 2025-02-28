@@ -29,6 +29,7 @@ jobs:
         if: matrix.deno == 'v2.x'
         uses: crate-ci/typos@master
 
-      - run: deno task check
-      - run: deno task test
+      - run: deno fmt
+      - run: deno lint
       - run: deno task check:types
+      - run: deno task test

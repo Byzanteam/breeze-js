@@ -7,7 +7,7 @@
     "useUnknownInCatchVariables": true,
     "noImplicitOverride": true,
     "types": [
-      "./global.d.ts"
+      "./types/global.d.ts"
     ]
   },
   "exclude": [
@@ -17,7 +17,7 @@
     ".": "./lib/runtime.ts",
     "./runtime": "./lib/runtime.ts",
     "./url": "./lib/url.ts",
-    "./types": "./global.d.ts"
+    "./types": "./types/global.d.ts"
   },
   "license": "MIT",
   "publish": {
@@ -26,8 +26,8 @@
     ]
   },
   "tasks": {
-    "check": "deno fmt --check && deno lint && deno task check:types && deno task test",
-    "test": "deno test -A && deno check tests/global_test.ts",
-    "check:types": "deno check lib/**/*.ts"
+    "check": "deno fmt && deno lint && deno task check:types && deno task test",
+    "check:types": "deno check lib/**/*.ts && deno check types/global_test.ts",
+    "test": "deno test -A"
   }
 }
