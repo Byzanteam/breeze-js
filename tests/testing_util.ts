@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, Stub, stub } from "../dev_deps.ts";
+import { afterEach, beforeEach, type Stub, stub } from "../dev_deps.ts";
 import { _internals } from "../lib/runtime.ts";
 
 let envs: {
@@ -26,5 +26,6 @@ export function setupEnv() {
   function setEnv(key: string, value: string) {
     envs.push({ key, value });
   }
+
   return { setEnv };
 }

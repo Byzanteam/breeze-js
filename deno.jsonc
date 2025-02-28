@@ -1,19 +1,33 @@
 {
-  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "$schema": "https://jsr.io/schema/config-file.v1.json",
+  "name": "@byzanteam/breeze-js",
+  "version": "0.1.0",
   "compilerOptions": {
     "strict": true,
     "useUnknownInCatchVariables": true,
     "noImplicitOverride": true,
     "types": [
-      "./mod.d.ts"
+      "./types/global.d.ts"
     ]
   },
   "exclude": [
     ".git"
   ],
+  "exports": {
+    ".": "./lib/runtime.ts",
+    "./runtime": "./lib/runtime.ts",
+    "./url": "./lib/url.ts",
+    "./types": "./types/global.d.ts"
+  },
+  "license": "MIT",
+  "publish": {
+    "exclude": [
+      ".github"
+    ]
+  },
   "tasks": {
-    "test": "deno check types_test.ts",
-    "check:types": "deno check **/*.ts",
-    "check": "deno fmt --check && deno lint && deno task check:types && deno task test"
+    "check": "deno fmt && deno lint && deno task check:types && deno task test",
+    "check:types": "deno check lib/**/*.ts && deno check types/global_test.ts",
+    "test": "deno test -A"
   }
 }

@@ -1,17 +1,3 @@
 # TypeScript type definitions for BreezeRuntime
 
-## Usage
-
-Add types into your deno config file(eg: `deno.jsonc`):
-
-```jsonc
-{
-  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
-  "compilerOptions": {
-    "types": [
-      // add types of BreezeRuntime
-      "https://cdn.jsdelivr.net/gh/Byzanteam/breeze-js@latest/mod.d.ts"
-    ]
-  }
-}
-```
+[![JSR](https://jsr.io/badges/@byzanteam/breeze-js)](https://jsr.io/@byzanteam/breeze-js)

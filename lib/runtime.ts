@@ -1,8 +1,5 @@
-export const isDeno = typeof Deno !== "undefined";
-export const isBreezeRuntime = typeof BreezeRuntime !== "undefined";
-
 export function getEnv(key: string): string | undefined {
-  return Deno.env.get(key);
+  return _internals.doGetEnv(key);
 }
 
 export function getEnvOrThrow(key: string): string {
