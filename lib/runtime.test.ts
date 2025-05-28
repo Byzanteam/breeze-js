@@ -1,6 +1,6 @@
 import { assertEquals, assertThrows } from "@std/assert";
 import { describe, it } from "@std/testing/bdd";
-import { getEnv, getEnvOrThrow } from "../lib/runtime.ts";
+import { getEnv, getEnvOrThrow } from "./runtime.ts";
 
 describe("Runtime Module", () => {
   it("getEnv should return the value of an environment variable", () => {
