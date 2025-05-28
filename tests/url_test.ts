@@ -1,6 +1,7 @@
+import { assertEquals } from "@std/assert";
+import { describe, it } from "@std/testing/bdd";
 import { buildUrl, getBaseUrl, joinPath } from "../lib/url.ts";
-import { assertEquals, describe, it } from "../dev_deps.ts";
-import { setupEnv } from "./testing_util.ts";
+import { setupEnv } from "./utils.ts";
 
 describe("buildUrl function", () => {
   const { setEnv } = setupEnv();

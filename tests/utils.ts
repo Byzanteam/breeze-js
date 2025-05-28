@@ -1,4 +1,5 @@
-import { afterEach, beforeEach, type Stub, stub } from "../dev_deps.ts";
+import { afterEach, beforeEach } from "@std/testing/bdd";
+import { type Stub, stub } from "@std/testing/mock";
 import { _internals } from "../lib/runtime.ts";
 
 let envs: {
