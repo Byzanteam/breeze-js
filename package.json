@@ -1,6 +1,6 @@
 {
   "name": "@byzanteam/breeze-js",
-  "version": "0.1.0-alpha.0",
+  "version": "0.6.0-alpha.0",
   "scripts": {
     "check": "deno task check",
     "test": "deno task test"
