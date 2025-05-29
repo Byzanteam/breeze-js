@@ -10,7 +10,7 @@
   },
   "tasks": {
     "check": "deno fmt && deno lint && deno task check:types && deno task test",
-    "check:types": "deno check lib/**/*.ts && deno check types/global.test.ts",
+    "check:types": "deno check src/**/*.ts && deno check types/global.test.ts",
     "test": "deno test -A"
   }
 }
