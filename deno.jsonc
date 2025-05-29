@@ -1,5 +1,4 @@
 {
-  // "name": "@byzanteam/breeze-js",
   "compilerOptions": {
     "strict": true,
     "useUnknownInCatchVariables": true,
