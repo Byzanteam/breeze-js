@@ -17,5 +17,4 @@ jobs:
       - run: npm ci
       - uses: JS-DevTools/npm-publish@v3
         with:
-          tag: v0.6.0-alpha.0
           token: ${{ secrets.NPM_AUTH_TOKEN }}
