@@ -1,6 +1,6 @@
 import { afterEach, beforeEach } from "@std/testing/bdd";
 import { type Stub, stub } from "@std/testing/mock";
-import { _internals } from "../lib/runtime.ts";
+import { _internals } from "../src/runtime.ts";
 
 let envs: {
   key: string;
