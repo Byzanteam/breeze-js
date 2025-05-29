@@ -3,7 +3,7 @@ import {
   type Has,
   type IsExact,
   type IsNullable,
-} from "../dev_deps.ts";
+} from "@std/testing/types";
 
 {
   type Result = ReturnType<typeof BreezeRuntime.getDeploymentInfo>;
